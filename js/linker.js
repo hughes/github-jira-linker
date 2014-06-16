@@ -1,3 +1,4 @@
+// TODO make these into extension options or even pull from jira directly
 var JIRA_LINK = 'https://tophat.atlassian.net',
     PROJECTS = ['WEB', 'IOS', 'AN', 'PT', 'PROD'];
 
