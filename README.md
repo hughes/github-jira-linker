@@ -6,6 +6,7 @@ How to use:
 2. Navigate to chrome://extensions
 3. Enable Developer Mode
 4. Click `Load unpacked extension...` and select this repo folder
+5. Click `Options`, enter `tophat` as the subdomain, click `Fetch projects`
 
 Before:
 
