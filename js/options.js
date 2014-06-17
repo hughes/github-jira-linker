@@ -14,7 +14,8 @@ function saveProjects() {
     subdomain: subdomain,
     projects: projects
   }, function () {
-    alert('Saved options');
+    $('#error').hide();
+    $('#results-container').show();
   });
 }
 
@@ -33,10 +34,17 @@ function parseProjects(data) {
   }
 }
 
+function fetchFail(xhr) {
+  $('#error').show();
+  $('#results-container').hide();
+  console.error(arguments);
+}
+
 function fetchProjects() {
+  $('#results').empty();
   if (subdomain) {
     var url = 'https://' + subdomain + '.atlassian.net/rest/api/2/project';
-    $.get(url).done(parseProjects);  // TODO fail handling
+    $.get(url).done(parseProjects).fail(fetchFail);
   }
 }
 
