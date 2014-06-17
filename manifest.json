@@ -4,12 +4,13 @@
     "description": "Makes Jira issue IDs clickable in GitHub",
     "version": "0.1",
     "permissions": [
-        "tabs", "https://github.com/*"
+        "tabs", "https://*.atlassian.net/*", "storage"
     ],
     "content_scripts": [
         {
             "matches": ["https://github.com/*"],
             "js": ["js/jquery.min.js", "js/jquery.regex.js", "js/linker.js"]
         }
-    ]
+    ],
+    "options_page": "options.html"
 }
