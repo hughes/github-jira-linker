@@ -12,5 +12,9 @@
             "js": ["js/linker.js"]
         }
     ],
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["js/eventPage.js"],
+        "persistent": false
+    }
 }
